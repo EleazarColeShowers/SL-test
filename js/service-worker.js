@@ -1,3 +1,5 @@
+
+
 const CACHE_NAME = 'sustainable-living-cache-v1';
 
 // Include all asset files from the manifest.json into the cache

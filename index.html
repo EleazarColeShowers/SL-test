@@ -24,6 +24,7 @@
     <link href="css/stylesheetSL2p.css" rel="stylesheet" type="text/css" />
     <link rel="manifest" href="/manifest.json">
 
+
     <style>
         @media (min-width:992px) {
             html.w-mod-js:not(.w-mod-ix) [data-w-id="c11c5423-835f-6098-1be2-3598c69d863a"] {
@@ -1608,18 +1609,22 @@
             })
         });
     </script>
-      <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker
-            .register('/service-worker.js')
-            .then((registration) => {
-              console.log('Service Worker registered with scope:', registration.scope);
-            })
-            .catch((error) => {
-              console.error('Service Worker registration failed:', error);
-            });
-        }
-      </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+
+            if ('serviceWorker' in navigator) {
+              navigator.serviceWorker
+                .register('/js/service-worker.js')
+                .then((registration) => {
+                  console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch((error) => {
+                  console.error('Service Worker registration failed:', error);
+                });
+            }
+        });
+          </script>
+
 </body>
 
 </html>
